@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的项目展示 | 个人主页</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 顶部导航/简介 -->
+    <header class="hero">
+        <div class="container">
+            <h1>张三的项目作品集</h1>
+            <p class="subtitle">光学工程 / 超分辨成像 / 计算光学</p>
+            <div class="contact">
+                <a href="mailto:zhangsan@example.com">zhangsan@example.com</a> |
+                <a href="https://github.com/zhangsan" target="_blank">GitHub</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 项目卡片网格 -->
+    <main class="container">
+        <h2 class="section-title">研究项目</h2>
+        
+        <div class="projects-grid">
+            <!-- 项目卡片 1 -->
+            <article class="project-card" onclick="location.href='projects/project-1.html'">
+                <div class="card-image">
+                    <img src="images/project-1/cover.jpg" alt="项目封面" loading="lazy">
+                </div>
+                <div class="card-content">
+                    <div class="card-tags">
+                        <span class="tag">光学成像</span>
+                        <span class="tag">深度学习</span>
+                    </div>
+                    <h3 class="card-title">基于深度学习的超分辨显微成像系统</h3>
+                    <p class="card-desc">开发了一套结合卷积神经网络与结构光照明的超分辨成像系统，分辨率提升2倍。</p>
+                    <div class="card-meta">
+                        <span class="date">2024.03 - 2025.01</span>
+                        <span class="arrow">查看详情 →</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 项目卡片 2 -->
+            <article class="project-card" onclick="location.href='projects/project-2.html'">
+                <div class="card-image">
+                    <img src="images/project-2/cover.jpg" alt="项目封面" loading="lazy">
+                </div>
+                <div class="card-content">
+                    <div class="card-tags">
+                        <span class="tag">微纳加工</span>
+                        <span class="tag">等离子体</span>
+                    </div>
+                    <h3 class="card-title">等离子体增强拉曼散射传感器设计</h3>
+                    <p class="card-desc">设计并制备了金纳米阵列结构，实现单分子级别检测灵敏度。</p>
+                    <div class="card-meta">
+                        <span class="date">2023.09 - 2024.02</span>
+                        <span class="arrow">查看详情 →</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 项目卡片 3 -->
+            <article class="project-card" onclick="location.href='projects/project-3.html'">
+                <div class="card-image">
+                    <img src="images/project-3/cover.jpg" alt="项目封面" loading="lazy">
+                </div>
+                <div class="card-content">
+                    <div class="card-tags">
+                        <span class="tag">计算成像</span>
+                        <span class="tag">相位恢复</span>
+                    </div>
+                    <h3 class="card-title">无透镜全息显微成像算法研究</h3>
+                    <p class="card-desc">提出基于压缩感知的相位恢复算法，实现大视场高分辨率无透镜成像。</p>
+                    <div class="card-meta">
+                        <span class="date">2023.01 - 2023.08</span>
+                        <span class="arrow">查看详情 →</span>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <footer>
+        <p> 2025 张三 | 使用 GitHub Pages 部署</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
