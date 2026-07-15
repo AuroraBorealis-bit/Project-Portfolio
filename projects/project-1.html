@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>基于深度学习的超分辨显微成像系统 | 项目详情</title>
+    <title>激光供能智能探测车 | 项目详情</title>
     <link rel="stylesheet" href="../style.css">
     <style>
-        /* 详情页特有样式 */
         .project-detail {
             max-width: 900px;
             margin: 0 auto;
@@ -27,6 +26,8 @@
         
         .detail-header {
             margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #667eea;
         }
         
         .detail-title {
@@ -39,7 +40,7 @@
             display: flex;
             gap: 20px;
             color: #718096;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             flex-wrap: wrap;
         }
         
@@ -55,11 +56,7 @@
             margin: 30px 0 15px;
             padding-bottom: 10px;
             border-bottom: 2px solid #e2e8f0;
-        }
-        
-        .detail-content h3 {
-            color: #4a5568;
-            margin: 25px 0 10px;
+            font-size: 1.4em;
         }
         
         .detail-content p {
@@ -73,7 +70,7 @@
             height: auto;
             border-radius: 8px;
             margin: 20px 0;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
         
         .image-caption {
@@ -81,7 +78,15 @@
             color: #718096;
             font-size: 0.9em;
             margin-top: -10px;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
+        }
+        
+        .highlight-box {
+            background: #f7fafc;
+            border-left: 4px solid #667eea;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
         }
         
         .tech-stack {
@@ -93,32 +98,31 @@
         
         .tech-tag {
             background: #edf2f7;
-            padding: 8px 16px;
+            padding: 6px 14px;
             border-radius: 20px;
             font-size: 0.9em;
             color: #4a5568;
         }
         
-        .highlight-box {
+        .contribution-list {
             background: #f7fafc;
-            border-left: 4px solid #667eea;
             padding: 20px;
+            border-radius: 8px;
             margin: 20px 0;
-            border-radius: 0 8px 8px 0;
         }
         
-        .two-column {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
-            margin: 20px 0;
+        .contribution-list ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        
+        .contribution-list li {
+            margin-bottom: 10px;
+            line-height: 1.7;
+            color: #4a5568;
         }
         
         @media (max-width: 768px) {
-            .two-column {
-                grid-template-columns: 1fr;
-            }
-            
             .detail-content {
                 padding: 20px;
             }
@@ -130,83 +134,51 @@
         <a href="../index.html" class="back-link">← 返回项目列表</a>
         
         <header class="detail-header">
-            <h1 class="detail-title">基于深度学习的超分辨显微成像系统</h1>
+            <h1 class="detail-title">激光供能智能探测车</h1>
             <div class="detail-meta">
-                <span>📅 2024.03 - 2025.01</span>
-                <span>🏷️ 光学成像, 深度学习</span>
-                <span>📍 清华大学实验室</span>
+                <span>📅 2025.09 - 至今</span>
+                <span>🏷️ 大创项目 / 光电设计竞赛</span>
+                <span>📍 中山大学</span>
             </div>
         </header>
         
         <article class="detail-content">
-            <!-- 项目概述 -->
             <h2>项目概述</h2>
-            <p>本项目旨在开发一套结合深度学习算法与结构光照明技术的超分辨显微成像系统。传统光学显微镜受衍射极限限制，分辨率约为200nm，无法满足现代生物医学研究对亚细胞结构观察的需求。</p>
+            <p>针对海底光缆巡检、水库大坝监测等水下基础设施运维需求，设计了一种<strong>基于光纤信能共传的深海智能无人车</strong>。通过单根空芯光纤实现1080nm激光供能与1550nm双向通信，解决传统水下设备续航短、成本高、无法长期驻守的痛点。</p>
             
             <div class="highlight-box">
-                <strong>核心成果：</strong>成功将系统分辨率提升至80nm，成像速度提升3倍，相关成果发表于《Optics Letters》。
+                <strong>核心指标：</strong>已完成5km光纤供能实测，系统输出1.952kW，光电转换效率43.74%（中国赛宝实验室认证）。
             </div>
             
-            <!-- 技术栈 -->
-            <h3>技术实现</h3>
-            <div class="tech-stack">
-                <span class="tech-tag">Python</span>
-                <span class="tech-tag">PyTorch</span>
-                <span class="tech-tag">CUDA</span>
-                <span class="tech-tag">Micro-Manager</span>
-                <span class="tech-tag">MATLAB</span>
-            </div>
-            
-            <!-- 系统架构图 -->
             <h2>系统架构</h2>
             <img src="../images/project-1/system-architecture.png" alt="系统架构图">
-            <p class="image-caption">图1：系统整体架构，包含照明模块、采集模块和重建模块</p>
+            <p class="image-caption">空芯光纤双向闭环信息与能量同传系统</p>
             
-            <!-- 关键创新点 -->
-            <h2>关键创新点</h2>
-            <h3>1. 物理模型驱动的网络设计</h3>
-            <p>不同于纯数据驱动的方法，我们将光学成像的物理模型（如点扩散函数、光学传递函数）嵌入网络结构，使网络具有更好的泛化能力和物理可解释性。</p>
+            <p>地面端通过波分复用器将1080nm高功率激光与1550nm通信光合束，经单根空芯光纤传输至水下。探测车端解复用后，1080nm光由光电池转换为电能驱动平台，1550nm光经光模块实现数据收发，实现<strong>"一根光纤、双波长、信能同传"</strong>。</p>
             
-            <div class="two-column">
-                <div>
-                    <img src="../images/project-1/traditional-result.jpg" alt="传统方法结果">
-                    <p class="image-caption">(a) 传统结构光显微镜结果</p>
-                </div>
-                <div>
-                    <img src="../images/project-1/our-result.jpg" alt="我们的方法结果">
-                    <p class="image-caption">(b) 本文方法结果</p>
-                </div>
+            <h2>实物展示</h2>
+            <img src="../images/project-1/full-vehicle.jpg" alt="整车实物">
+            <p class="image-caption">全工作状态下的激光供能智能探测车</p>
+            
+            <p>整车集成三光吊舱、扩展底盘、MPPT电源管理、光电池散热等模块，左侧黄色跳线用于传信，右侧白色跳线用于供能。配套一体化显控软件实现AI视觉识别与远程控制，构建覆盖85类目标的水下缺陷检测能力。</p>
+            
+            <h2>个人贡献</h2>
+            <div class="contribution-list">
+                <ul>
+                    <li><strong>无人车系统全流程搭建：</strong>独立完成调研、选型、采购、组装与调试</li>
+                    <li><strong>信能同传方案设计：</strong>提出万兆光模块与传能系统匹配，实现单纤同波长双向通信（论文撰写中）</li>
+                    <li><strong>系统联调测试：</strong>完成地面端到水下端的全流程验证</li>
+                </ul>
             </div>
             
-            <h3>2. 实时重建算法优化</h3>
-            <p>通过模型压缩和TensorRT加速，将单张图像重建时间从5分钟缩短至10秒，满足实时观察需求。</p>
-            
-            <img src="../images/project-1/speed-comparison.png" alt="速度对比">
-            <p class="image-caption">图3：不同方法的重建速度对比</p>
-            
-            <!-- 实验结果 -->
-            <h2>实验结果</h2>
-            <p>在标准分辨率测试靶和生物样品（细胞骨架、线粒体）上进行了系统验证：</p>
-            
-            <img src="../images/project-1/biological-sample.jpg" alt="生物样品成像结果">
-            <p class="image-caption">图4：COS-7细胞线粒体成像结果，(a)宽场，(b)我们的方法，(c)电镜对照</p>
-            
-            <!-- 个人贡献 -->
-            <h2>个人贡献</h2>
-            <ul style="margin-left: 20px; color: #4a5568; line-height: 2;">
-                <li>负责整体系统架构设计和算法开发</li>
-                <li>搭建基于PyTorch的深度学习训练框架</li>
-                <li>完成光学系统搭建与光路校准</li>
-                <li>撰写论文并负责实验验证部分</li>
-            </ul>
-            
-            <!-- 项目链接 -->
-            <h2>相关链接</h2>
-            <p>
-                <a href="#" target="_blank">📄 论文链接</a> | 
-                <a href="#" target="_blank">💻 GitHub代码</a> | 
-                <a href="#" target="_blank">🎥 演示视频</a>
-            </p>
+            <h2>技术标签</h2>
+            <div class="tech-stack">
+                <span class="tech-tag">光纤传能</span>
+                <span class="tech-tag">空芯光纤</span>
+                <span class="tech-tag">波分复用</span>
+                <span class="tech-tag">AI视觉</span>
+                <span class="tech-tag">无人车系统</span>
+            </div>
         </article>
     </div>
 </body>
