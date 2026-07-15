@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>基于深度学习的超分辨显微成像系统 | 项目详情</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        /* 详情页特有样式 */
+        .project-detail {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin-bottom: 30px;
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        
+        .detail-header {
+            margin-bottom: 40px;
+        }
+        
+        .detail-title {
+            font-size: 2.2em;
+            color: #2d3748;
+            margin-bottom: 15px;
+        }
+        
+        .detail-meta {
+            display: flex;
+            gap: 20px;
+            color: #718096;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .detail-content {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.07);
+        }
+        
+        .detail-content h2 {
+            color: #2d3748;
+            margin: 30px 0 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e2e8f0;
+        }
+        
+        .detail-content h3 {
+            color: #4a5568;
+            margin: 25px 0 10px;
+        }
+        
+        .detail-content p {
+            margin-bottom: 15px;
+            line-height: 1.8;
+            color: #4a5568;
+        }
+        
+        .detail-content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 20px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .image-caption {
+            text-align: center;
+            color: #718096;
+            font-size: 0.9em;
+            margin-top: -10px;
+            margin-bottom: 20px;
+        }
+        
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 20px 0;
+        }
+        
+        .tech-tag {
+            background: #edf2f7;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            color: #4a5568;
+        }
+        
+        .highlight-box {
+            background: #f7fafc;
+            border-left: 4px solid #667eea;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin: 20px 0;
+        }
+        
+        @media (max-width: 768px) {
+            .two-column {
+                grid-template-columns: 1fr;
+            }
+            
+            .detail-content {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="project-detail">
+        <a href="../index.html" class="back-link">← 返回项目列表</a>
+        
+        <header class="detail-header">
+            <h1 class="detail-title">基于深度学习的超分辨显微成像系统</h1>
+            <div class="detail-meta">
+                <span>📅 2024.03 - 2025.01</span>
+                <span>🏷️ 光学成像, 深度学习</span>
+                <span>📍 清华大学实验室</span>
+            </div>
+        </header>
+        
+        <article class="detail-content">
+            <!-- 项目概述 -->
+            <h2>项目概述</h2>
+            <p>本项目旨在开发一套结合深度学习算法与结构光照明技术的超分辨显微成像系统。传统光学显微镜受衍射极限限制，分辨率约为200nm，无法满足现代生物医学研究对亚细胞结构观察的需求。</p>
+            
+            <div class="highlight-box">
+                <strong>核心成果：</strong>成功将系统分辨率提升至80nm，成像速度提升3倍，相关成果发表于《Optics Letters》。
+            </div>
+            
+            <!-- 技术栈 -->
+            <h3>技术实现</h3>
+            <div class="tech-stack">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">PyTorch</span>
+                <span class="tech-tag">CUDA</span>
+                <span class="tech-tag">Micro-Manager</span>
+                <span class="tech-tag">MATLAB</span>
+            </div>
+            
+            <!-- 系统架构图 -->
+            <h2>系统架构</h2>
+            <img src="../images/project-1/system-architecture.png" alt="系统架构图">
+            <p class="image-caption">图1：系统整体架构，包含照明模块、采集模块和重建模块</p>
+            
+            <!-- 关键创新点 -->
+            <h2>关键创新点</h2>
+            <h3>1. 物理模型驱动的网络设计</h3>
+            <p>不同于纯数据驱动的方法，我们将光学成像的物理模型（如点扩散函数、光学传递函数）嵌入网络结构，使网络具有更好的泛化能力和物理可解释性。</p>
+            
+            <div class="two-column">
+                <div>
+                    <img src="../images/project-1/traditional-result.jpg" alt="传统方法结果">
+                    <p class="image-caption">(a) 传统结构光显微镜结果</p>
+                </div>
+                <div>
+                    <img src="../images/project-1/our-result.jpg" alt="我们的方法结果">
+                    <p class="image-caption">(b) 本文方法结果</p>
+                </div>
+            </div>
+            
+            <h3>2. 实时重建算法优化</h3>
+            <p>通过模型压缩和TensorRT加速，将单张图像重建时间从5分钟缩短至10秒，满足实时观察需求。</p>
+            
+            <img src="../images/project-1/speed-comparison.png" alt="速度对比">
+            <p class="image-caption">图3：不同方法的重建速度对比</p>
+            
+            <!-- 实验结果 -->
+            <h2>实验结果</h2>
+            <p>在标准分辨率测试靶和生物样品（细胞骨架、线粒体）上进行了系统验证：</p>
+            
+            <img src="../images/project-1/biological-sample.jpg" alt="生物样品成像结果">
+            <p class="image-caption">图4：COS-7细胞线粒体成像结果，(a)宽场，(b)我们的方法，(c)电镜对照</p>
+            
+            <!-- 个人贡献 -->
+            <h2>个人贡献</h2>
+            <ul style="margin-left: 20px; color: #4a5568; line-height: 2;">
+                <li>负责整体系统架构设计和算法开发</li>
+                <li>搭建基于PyTorch的深度学习训练框架</li>
+                <li>完成光学系统搭建与光路校准</li>
+                <li>撰写论文并负责实验验证部分</li>
+            </ul>
+            
+            <!-- 项目链接 -->
+            <h2>相关链接</h2>
+            <p>
+                <a href="#" target="_blank">📄 论文链接</a> | 
+                <a href="#" target="_blank">💻 GitHub代码</a> | 
+                <a href="#" target="_blank">🎥 演示视频</a>
+            </p>
+        </article>
+    </div>
+</body>
+</html>
